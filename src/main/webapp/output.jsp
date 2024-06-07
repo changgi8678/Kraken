@@ -13,46 +13,37 @@
 	
 	
 	 <tr> 
-          <th colspan=4>Git Practice</th> 
+          <th colspan=3>Git Practice</th> 
           </tr> 
           <tr> 
           <th>Id</th>
           <th>Title</th>
           <th>Genre</th>
-          <th>Date</th>
+          
           </tr> 
 
 
 	<c:forEach var="dto" items="${list }">
 		<tr>
 			<td>${dto.id}</td>
-			<td>${dto.name}</td>
+			<td>${dto.title}</td>
 			<td>${dto.genre}</td>
-			<td>${dto.write_date}</td>
+			
 		</tr>
 	</c:forEach>
 		
-        <!--   for (MovieDTO dto : list) {
-             <tr> 
-             <td>" + dto.getId());
-             <td>" + dto.getTitle());
-             <td>" + dto.getGenre());
-             <td>" + dto.getMovie_date());
-             </tr> 
-         }
-         -->
-         // 삭제
+        
           <tr> 
-          <td colspan=4> 
+          <td colspan=3> 
           <form action="delete.movies"> 
           <input type='text' placeholder='Delete ID' name='delet_id'/> 
          <button id='delete_btn'>Delete</button> 
           </form> 
           </td> 
           </tr> 
-         // 수정
+        
           <tr> 
-          <td colspan=4> 
+          <td colspan=3> 
           <form action='update.movies'> 
           <input type='text' placeholder='Update ID' name='update_id'/> 
           <br> 
@@ -67,7 +58,7 @@
           </td> 
           </tr> 
           <tr> 
-          <td colspan=4 align=center> 
+          <td colspan=3 align=center> 
           <button id='back_btn'>Back</button> 
           </td> 
           </tr> 
